@@ -1,0 +1,54 @@
+.App {
+    font-family: sans-serif;
+  }
+  .header{
+    width: 1900;
+    background-color: rgb(243, 181, 10);
+    text-align: center;
+  }
+  .header ul {
+    margin-top: 20px;
+  }
+.product{
+  width: 600px;
+  height: 800px;
+}
+  .menu {
+    text-align: center;
+    display: inline;
+    margin: 20px;
+    text-decoration: none;
+    font-weight: 800;
+    color: rgb(13, 13, 14);
+    margin-top: 20px;
+}
+.from{
+  background-color: aliceblue;
+  width: 1900px;
+  height: 100%;
+  text-align: center;
+  background-image: linear-gradient(rgb(243, 181, 10), yellow);
+}
+.inputtext{
+
+  margin-top: 20px;
+  width: 300px;
+  height: 20px;
+}
+.LinkEdit{
+ display: inline;
+ width: 200px;
+ height: 25px;
+
+padding-left: 100px;
+text-align: left;
+}
+.box{
+  width: 1900px;
+  text-align: left;
+}
+.buttonproduct{
+text-align: right;
+width: 50px;
+height: 25px;
+}
