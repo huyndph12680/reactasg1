@@ -1,7 +1,8 @@
+import img from './17.jpg'
 function TrangChu () {
     return(
         <div className="trangchu">
-            <img src="https://cdn.pico.vn/Shop/30_pico_-_le_hoan.jpg" width="100%" height="650"></img>
+            <img src={img} width="90%" height="850"></img>
         </div>
     )
 }

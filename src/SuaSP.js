@@ -21,30 +21,31 @@ const Edit = (props) => {
       ...data
     };
     update(product).then((response) => {
-      // console.log("response", response);
+      
       props.onUpdate(response.data);
     });
   };
   return (
     <>
-    <p> Tên sản Phẩm :</p>
-      {JSON.stringify(product.name)}
-      <p> Giá sản phẩm:</p>
-      {JSON.stringify(product.price)}
-      <p> mô tả sản phẩm:</p>
-      {JSON.stringify(product.desc)}
+    <p> Tên sản Phẩm : {JSON.stringify(product.name)}</p>
+      
+      <p> Giá sản phẩm: {JSON.stringify(product.price)}</p>
+      
+      <p> mô tả sản phẩm: {JSON.stringify(product.desc)}</p>
+      
       <hr />
       <h2>Cập nhật sản phẩm</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <input type="text" defaultValue={product.name} {...register("name")} />
+        <input className="update" type="text" defaultValue={product.name} {...register("name")} />
         <br />
         <input
+        className="update"
           type="number"
           defaultValue={product.price}
           {...register("price")}
         />
         <br />
-        <input type="text" defaultValue={product.desc} {...register("desc")} />
+        <input className="update" type="text" defaultValue={product.desc} {...register("desc")} />
         <br/>
         <button type="submit">Submit</button>
       </form>

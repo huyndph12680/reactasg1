@@ -21,13 +21,13 @@ const Product = (props) => {
           {props.products.map((item, index) => (
             <div key={index} className = "box">
               
-              <div className = "LinkEdit">
+              <div className = "LinkEdit name">
               <Link to={`/product/${item.id}`}>{item.name}</Link>
               </div>
-              <div className = "LinkEdit">
+              <div className = "LinkEdit buttondelete">
               <button onClick={() => removeProduct(item.id)} className ="buttonproduct">Delete</button>
               </div>
-              <div className = "LinkEdit">
+              <div className = "LinkEdit buttonedit">
               <Link to={`/product/${item.id}/edit`} className = "LinkEdit">Edit</Link>
               {/* <button to={`/product/${item.id}/edit`} className ="buttonproduct">edit</button> */}
               </div>
@@ -38,7 +38,29 @@ const Product = (props) => {
           <AddProduct {...props} />
         </Route>
         <Route path={`${url}/:id`} exact>
-          Detail Product
+          <div>
+            {props.products.map((item,index)=>{
+             return(
+               <div key = {index}>
+                
+                 <tr>
+                   <td>
+                   <h3>{item.name}</h3>
+                   </td>
+                   <td>
+                   <h3>{item.price}</h3>
+                   </td>
+                   <td>
+                   <h3>{item.des}</h3>
+                   </td>                  
+                 </tr>
+
+               </div>
+             );
+              
+             
+            })}
+          </div>
         </Route>
         <Route path={`${url}/:id/edit`}>
           <Edit {...props} />
